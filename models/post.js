@@ -13,7 +13,7 @@ Post.init(
     },
     comment: {
       type: DataTypes.STRING,
-      allowNull: falsem,
+      allowNull: false,
     },
     content: {
       type: DataTypes.TEXT,
