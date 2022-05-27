@@ -13,6 +13,7 @@ Comment.init(
     },
     comment_text: {
       type: DataTypes.TEXT,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -33,7 +34,7 @@ Comment.init(
   },
   {
     sequelize,
-    // timestamps: false, commented out
+    //timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "comment",

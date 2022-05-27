@@ -1,0 +1,27 @@
+[
+  {
+    "comment_text": "This is comment for post_id 1 and user_id 1",
+    "user_id": 1,
+    "post_id": 1
+  },
+  {
+    "comment_text": "This is comment for post_id 2 and user_id 2",
+    "user_id": 2,
+    "post_id": 2
+  },
+  {
+    "comment_text": "Thi is a comment for post_id 3 by user_id 3.",
+    "user_id": 3,
+    "post_id": 3
+  },
+  {
+    "comment_text": "This is comment for post_id 3 and user_id 2.",
+    "user_id": 2,
+    "post_id": 3
+  },
+  {
+    "comment_text": "This is comment for post_id 2 and user_id 1.",
+    "user_id": 1,
+    "post_id": 2
+  }
+]
