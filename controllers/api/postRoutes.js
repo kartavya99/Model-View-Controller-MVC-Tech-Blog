@@ -47,6 +47,20 @@ router.get("/;id", async (req, res) => {
   }
 });
 
+// creat post
+router.post("/", async (req, res) => {
+  try {
+    const postData = await Post.create({
+      title: req.body.title,
+      content: req.body.content,
+      user_id: req.body.user_id,
+    });
+    res.status(200).json({ message: `New Post is created now` });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //update post
 router.put("/:id", async (req, res) => {
   try {
