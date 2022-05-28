@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
     });
 
     //Serialize data so the template can read it
-    const posts = postData.map((posts) => postData.get({ plain: true }));
+    // const posts = postData.map((posts) => postData.get({ plain: true }));
 
     // Pass serialized data
     res.render("homepage");
