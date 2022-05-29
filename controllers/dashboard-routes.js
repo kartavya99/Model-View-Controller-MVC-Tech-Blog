@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
     const posts = postData.map((postData) => postData.get({ plain: true }));
 
     res.render("dashboard", {
-      posts,
+      allPost,
       logged_in: true,
       username: req.session.username,
     });
@@ -35,5 +35,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// to create new post for user
 
 module.exports = router;
