@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Home</a>
-  <a class="navbar-brand" href="#">Post</a>
-  <a class="navbar-brand" href="#">Login</a>
-  <a class="navbar-brand" href="#">Logout</a>
+  <a class="navbar-brand" href="/">Home</a>
+  <a class="navbar-brand" href="/api/post">Post</a>
+  <a class="navbar-brand" href="/login">Login</a>
+  <a class="navbar-brand" id="logout" href="/">Logout</a>
 </nav>
 
 <div>
@@ -16,3 +16,8 @@
 <li>
   {{body}}
 </li>
+
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+{{/if}}

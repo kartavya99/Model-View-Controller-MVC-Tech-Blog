@@ -1,9 +1,8 @@
-const res = require("express/lib/response");
-
+console.log("logout");
 const logout = async () => {
   const response = await fetch("/api/user/logout", {
     method: "POST",
-    headers: { "Cotent-Type": "application/json" },
+    headers: { "Content-Type": "application/json" },
   });
 
   if (response.ok) {

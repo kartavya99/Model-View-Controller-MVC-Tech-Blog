@@ -75,17 +75,13 @@ router.post("/login", async (req, res) => {
 });
 
 // logout
-router.post("/logout", async (req, res) => {
-  try {
-    if (req.session.logged_in) {
-      const userData = await req.session.destroy(() => {
-        res.status(204).end();
-      });
-    } else {
-      res.status(404).end();
-    }
-  } catch (err) {
-    res.status(500).end();
+router.post("/logout", (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
