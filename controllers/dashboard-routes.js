@@ -23,18 +23,18 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-    console.log(postData);
 
     const posts = postData.map((postData) => postData.get({ plain: true }));
-
+    // console.log(postData);
     console.log(posts);
 
     res.render("dashboard", {
-      allPost,
+      posts,
       logged_in: true,
       username: req.session.username,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
