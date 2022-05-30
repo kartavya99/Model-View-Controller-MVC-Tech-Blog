@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// creat a new commnet
+// creat a new comment
 router.post("/", async (req, res) => {
   try {
     const commentData = await Comment.create({

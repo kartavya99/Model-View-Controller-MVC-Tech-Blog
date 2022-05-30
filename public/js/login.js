@@ -1,3 +1,5 @@
+console.log("Please login");
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
