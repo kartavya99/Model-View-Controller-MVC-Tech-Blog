@@ -10,6 +10,7 @@
     <!-- Below we are rendering the name of one dish using a Handlebars.js expression -->
 
     <h1> Site under maintenance please visit later</h1>
+    <h2> {{logged_in}}</h2>
 
   </div>
 </div>
@@ -18,6 +19,6 @@
 </li>
 
 <!-- Render script for logged in users only -->
-{{#if logged_in}}
-  <script src="/js/logout.js"></script>
-{{/if}}
+{{!-- {{#if logged_in}} --}}
+<script src="/js/logout.js"></script>
+{{!-- {{/if}} --}}
