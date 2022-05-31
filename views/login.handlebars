@@ -1,13 +1,4 @@
-<div>
-  <div>
-    <!-- Below we are rendering the name of one dish using a Handlebars.js expression -->
-
-    <h1> Site under maintenance please visit later to login </h1>
-
-   </div>
-</div>
-
-<div class="row">
+{{! <div class="row">
   <div class="col-md-6">
     <h2>Login</h2>
 
@@ -28,6 +19,39 @@
 
   <div>
      <a class="navbar-brand" href="/signup">sing up</a>
-  </div>
+  </div> }}
 
-  <script src="js/login.js"></script>
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-header">Login</h3>
+    <form class="login-form">
+      <div class="form-group">
+        <label for="exampleInputEmail1" for="username-login">Eamil</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email-login"
+          autofocus="true"
+          class
+          aria-describedby="username"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          autofocus="true"
+          id="password-login"
+        />
+      </div>
+      <button class="btn btn-primary" type="submit">login</button>
+
+      <hr />
+      <a class="login-link" href="/signup">Sign up instead</a>
+    </form>
+
+  </div>
+</div>
+<script src="js/logout.js"></script>
+<script src="js/login.js"></script>

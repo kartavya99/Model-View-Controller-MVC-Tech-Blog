@@ -1,3 +1,42 @@
+:root {
+  --primary: #eae7dc;
+  --secondary: #d8c3a5;
+  --tertiary: #e98074;
+  --light-dark: #6f6866;
+  --dark: #38302e;
+  --border-radius: 0.3rem;
+}
+
+* {
+  max-width: 1400px;
+}
 body {
-  background-color: #def2f1;
+  background-color: var(--primary);
+}
+
+nav {
+  color: black;
+}
+
+#navbar {
+  height: 100px;
+  font-size: 25px;
+  justify-content: left;
+  background-color: var(--light-dark);
+}
+
+.navbar-brand {
+  color: whitesmoke;
+}
+
+a {
+  color: var(--tertiary);
+}
+
+.hero {
+  color: var(--dark);
+  height: 75px;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
 }
