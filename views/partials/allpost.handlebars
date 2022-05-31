@@ -1,12 +1,9 @@
 <div class="card">
-  <div class="card-header">
+  <div class="card-header flex-row justify-space-between">
     <div>
-      {{user.username}}
+      <h4><a href="/post/{{id}}">{{title}}</a> from {{user.username}} </h4>
       {{content}}
-      {{! create a button here which will take user to post which shows the comment }}
-      <a href="/post/{{id}}">Go to Post</a>
     </div>
-
   </div>
 </div>
 <script src="/js/logout.js"></script>
