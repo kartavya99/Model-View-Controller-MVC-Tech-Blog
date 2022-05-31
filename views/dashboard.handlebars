@@ -1,8 +1,29 @@
 <div>
 {{#each posts as |post| }}
-  {{> allPost post}}
+  {{> editpost post}}
   {{/each}}
 
 </div>
+
+{{!-- add form to create a post --}}
+
+    <h2>New Post</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">Post:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Content:</label>
+        <textarea class="form-input" type="text" id="email-signup"></textarea>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Add </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div>
  
- 
+ <script src="js/createPost.js"></script>

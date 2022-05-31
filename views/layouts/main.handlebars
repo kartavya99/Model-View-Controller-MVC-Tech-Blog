@@ -16,13 +16,19 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
     <a class="navbar-brand" href="/">Home</a>
-    <a class="navbar-brand" href="/dashboard">Dashboard</a>
-    <a class="navbar-brand" href="/login">Login</a>
-    <a class="navbar-brand" id="logout" href="/">Logout</a>
+    <!-- Conditionally render login or logout links -->
+    {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      |
+      <button class="no-button" id="logout">logout</button>
+    {{else}}
+      <a href="/login">login</a>
+    {{/if}}
+
   </nav>
 
   <header class="hero">
-    <h1 class="app-title"><a href="/api/post">The Tech Blog</a></h1>
+    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
   </header>
 
   <body>
@@ -30,4 +36,6 @@
     {{{body}}}
 
   </body>
+
+  {{! connect logout.js }}
 </html>

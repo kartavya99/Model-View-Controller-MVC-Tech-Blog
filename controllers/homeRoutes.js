@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../models");
+// import withAuth
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
@@ -12,11 +14,14 @@ router.get("/", async (req, res) => {
 
           include: { model: User, attributes: ["username"] },
         },
+
+        { model: User, attributes: ["username"] },
       ],
     });
 
     //Serialize data so the template can read it
     const posts = postData.map((postData) => postData.get({ plain: true }));
+    console.log(posts);
 
     // Pass serialized data
     res.render("homepage", {
@@ -30,7 +35,7 @@ router.get("/", async (req, res) => {
 });
 
 // get Post by id
-router.get("/post/:id", async (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -45,7 +50,36 @@ router.get("/post/:id", async (req, res) => {
     //Serialize data so the template can read it
     const posts = postData.get({ plain: true });
 
-    res.redirect("single-post");
+    res.render("single-post", {
+      posts,
+      logged_in: req.session.logged_in,
+      username: req.session.username,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/edit/:id", withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          attributes: ["id", "comment_text", "post_id", "user_id"],
+          include: { model: User, attributes: ["username"] },
+        },
+      ],
+    });
+
+    //Serialize data so the template can read it
+    const posts = postData.get({ plain: true });
+
+    res.render("edit-post", {
+      posts,
+      logged_in: req.session.logged_in,
+      username: req.session.username,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

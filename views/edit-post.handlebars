@@ -2,7 +2,12 @@
   <div>
     <!-- Below we are rendering the name of one dish using a Handlebars.js expression -->
 
-    <h1> Site under maintenance please visit later to edit posts </h1>
+    <h1>{{posts.title}}</h1>
+    <H2>{{posts.content}}</H2>
+    {{!-- <h3>{{posts.comments}}</h3> --}}
 
+     {{#each posts.comments as |comment| }}
+      {{> allcomments comment}}
+      {{/each}}
   </div>
 </div>
