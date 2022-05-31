@@ -17,10 +17,9 @@ const postFormHandler = async (event) => {
     body: JSON.stringify({ title, content }),
     headers: { "Content-Type": "application/json" },
   });
-  console.log(
-    "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
-  );
-  console.log(response);
+
+  console.log(title);
+  console.log(content);
 
   if (response.ok) {
     //IF successful, redirect the browser to the dashboard page

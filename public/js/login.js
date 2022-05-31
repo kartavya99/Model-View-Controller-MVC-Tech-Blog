@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // IF successful, redirect the browser to the profile page
+      // IF successful, redirect the browser to the da
       document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
