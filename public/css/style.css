@@ -29,7 +29,8 @@ nav {
   color: whitesmoke;
 }
 
-a {
+a,
+h3 {
   color: var(--tertiary);
 }
 
