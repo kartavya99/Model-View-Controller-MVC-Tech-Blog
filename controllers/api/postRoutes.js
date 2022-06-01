@@ -54,7 +54,7 @@ router.post("/", withAuth, async (req, res) => {
     await Post.create({
       title: req.body.title,
       content: req.body.content,
-      user_id: req.body.user_id || null,
+      user_id: req.body.user_id,
     });
     res.status(200).json({ message: `New Post is created now` });
   } catch (err) {
