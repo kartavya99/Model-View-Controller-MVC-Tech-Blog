@@ -1,8 +1,11 @@
 <div class="card">
   <div class="card-header flex-row justify-space-between">
+    <div class="justify-space-between">
+      <h4><a href="/post/{{id}}">{{title}}</a></h4>
+      <h4>{{user.username}}</h4>
+    </div>
     <div>
-      <h4><a href="/post/{{id}}">{{title}}</a> from {{user.username}} </h4>
-      {{content}}
+      <p class="card-body">{{content}}</p>
     </div>
   </div>
 </div>

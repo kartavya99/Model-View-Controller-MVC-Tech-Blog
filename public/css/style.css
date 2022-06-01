@@ -8,8 +8,9 @@
 }
 
 * {
-  max-width: 1400px;
+  max-width: auto;
 }
+
 body {
   background-color: var(--primary);
 }
@@ -40,4 +41,12 @@ h3 {
   text-align: left;
   padding-top: 10px;
   padding-left: 10px;
+}
+
+@media (max-width: 490px) {
+  textarea {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
 }
