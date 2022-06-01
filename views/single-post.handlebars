@@ -1,7 +1,6 @@
 <div>
   <div>
-    <!-- Below we are rendering the name of one dish using a Handlebars.js expression -->
-
+   
     <h1>{{posts.title}}</h1>
     <H2>{{posts.content}}</H2>
     {{!-- <h3>{{posts.comments}}</h3> --}}
@@ -12,3 +11,15 @@
 
   </div>
 </div>
+<div class="card" id="comment">
+  <h3 class="card-header new-post">Create New Comment</h3>
+  <form class="card-body new-post-form" id="new-post-form">
+    <div>
+      <textarea name="content" id="new-comment" cols="50" rows="5"></textarea>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-light">Submit</button>
+  </form>
+</div>
+
+<script src="/js/comment.js"></script>
