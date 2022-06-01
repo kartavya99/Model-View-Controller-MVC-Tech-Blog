@@ -1,13 +1,26 @@
-<div>
+{{!-- <div>
   <div>
    
     <h1>{{posts.title}}</h1>
-    <H2>{{posts.content}}</H2>
+    <H2>{{posts.content}}</H2> --}}
     {{!-- <h3>{{posts.comments}}</h3> --}}
 
-     {{#each posts.comments as |comment| }}
+     {{!-- {{#each posts.comments as |comment| }}
+      {{> allcomments comment}}
+      {{/each}} --}}
+
+<div class="card">
+  <h5 class="card-header"></h5>
+  <div class="card-body">
+    <h5 class="card-title">{{posts.title}}</h5>
+    <p class="card-text">{{posts.content}}</p>
+    <p>{{#each posts.comments as |comment| }}
       {{> allcomments comment}}
       {{/each}}
+    </p>
+      </div>
+</div>
+
 
   </div>
 </div>
