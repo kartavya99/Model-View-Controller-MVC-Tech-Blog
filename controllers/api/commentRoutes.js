@@ -14,11 +14,12 @@ router.get("/", async (req, res) => {
 
 // creat a new comment
 router.post("/", async (req, res) => {
+  console.log(req.body);
   try {
     const commentData = await Comment.create({
-      comment_text: req.session.comment_text,
-      post_id: req.session.post_id,
-      user_id: req.session.user.id,
+      comment_text: req.body.comment_text,
+      post_id: req.body.post_id,
+      user_id: req.session.user_id,
     });
     res.status(200).json(commentData);
   } catch (err) {

@@ -35,7 +35,7 @@ router.get("/", withAuth, async (req, res) => {
       username: req.session.username,
     });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     res.status(500).json(err);
   }
 });
