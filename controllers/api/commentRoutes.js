@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 
 // creat a new comment
 router.post("/", async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const commentData = await Comment.create({
       comment_text: req.body.comment_text,
@@ -23,6 +23,7 @@ router.post("/", async (req, res) => {
     });
     res.status(200).json(commentData);
   } catch (err) {
+    //console.log(err);
     res.status(500).json(err);
   }
 });

@@ -3,7 +3,7 @@ console.log("comment");
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const newComment = document.querySelector("#new-comment").value.trim();
+  const comment_text = document.querySelector("#new-comment").value.trim();
 
   const post_id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
@@ -11,11 +11,11 @@ const commentFormHandler = async (event) => {
 
   const response = await fetch("/api/comment", {
     method: "POST",
-    body: JSON.stringify({ newComment, post_id }),
+    body: JSON.stringify({ comment_text, post_id }),
     headers: { "Content-Type": "application/json" },
   });
 
-  console.log(newComment);
+  console.log(comment_text);
 
   if (response.ok) {
     document.location.reload();
