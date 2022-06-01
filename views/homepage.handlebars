@@ -1,17 +1,6 @@
 <div>
-  <div>
-    <!-- Below we are rendering the name of one dish using a Handlebars.js expression -->
-    <div>
-  {{#each posts as |post| }}
+   {{#each posts as |post| }}
   {{> allPost post}}
   {{/each}}
-
 </div>
 
-  </div>
-</div>
-
-<!-- Render script for logged in users only -->
-{{#if logged_in}}
-  <script src="/js/logout.js"></script>
-{{/if}}

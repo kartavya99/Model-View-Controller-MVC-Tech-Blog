@@ -1,11 +1,14 @@
 <div class="card">
   <div class="card-header">
     <div>
-      {{user.username}}
+      {{!-- {{user.username}} --}}
+      <div>
+        Title :
+        {{title}}
+      </div>
       {{content}}
-      {{! create a button here which will take user to post which shows the comment }}
-      <a href="/edit/{{id}}">Go to Post</a>
+      <a href="/edit/{{id}}"><button class="btn btn-link" type="submit">Edit
+          Post</button></a>
     </div>
-
   </div>
 </div>
