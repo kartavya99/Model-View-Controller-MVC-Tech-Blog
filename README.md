@@ -4,10 +4,6 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 ## [![made-with-javascript](https://img.shields.io/badge/JavaScript-1f425f.svg)](https://www.javascript.com)
 
-# ER Diagram
-
-<img src = "public/images/tech_blog.png" width ="400">
-
 # Functionality of this app
 
 - Platform for users to create different posts, updated and delete. User can also add and comments to posts as well. User Authentication is used for security purpose as well.
@@ -26,6 +22,10 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 # live application
 
 [Tech Blog](https://techblogks.herokuapp.com/)
+
+# ER Diagram
+
+<img src = "public/images/tech_blog.png" width ="400">
 
 # Below are the sample pages of command line application
 
